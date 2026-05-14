@@ -19,17 +19,48 @@ investment pitching (招商/投资).
 
 ## How to Get the Profile Content
 
-Ask the user for their LinkedIn profile URL. Try fetching it with web_fetch first.
-If the page requires login (most will), ask the user to paste the text content of
-these sections, or provide screenshots:
+### Step 1: Try Direct Fetch
 
-- Headline
-- About section
-- Experience (current + last 2-3 roles)
-- Featured section (if any)
-- Recent activity / posts (last 3-5)
+Ask the user for their LinkedIn profile URL. Call web_fetch once.
 
-For photo and banner, the user can provide the image files or describe them.
+### Step 2: Check for Login Wall (CRITICAL)
+
+After the fetch, check the result immediately. If the page content contains ANY of
+these signals, the profile is behind a login wall and you MUST switch to manual mode:
+
+- "Sign in to view" or "Join LinkedIn" or "Agree & Join"
+- "Sign Up | LinkedIn" in the title
+- "authwall" in the URL
+- Only login/signup forms with no profile data
+
+**DO NOT retry the fetch.** One attempt is enough. Retrying will not bypass the wall.
+Instead, tell the user: "This profile is behind LinkedIn's login wall — most are.
+Copy these sections from the profile and I'll audit them:"
+
+Then ask for exactly these fields:
+
+```
+1. Headline (名字下面那行小字)
+2. About section (完整复制)
+3. Experience — 最近 2-3 段职位（每段：职位名 + 公司 + 时间 + 描述）
+4. Skills — 前 5 个技能
+5. 最近 3 条动态（如果有发帖）
+6. 头像和 Banner 可以描述一下
+```
+
+### Step 3: Manual Content Audit
+
+When the user provides text content, audit it just as thoroughly as if you had
+fetched it directly. The scoring framework doesn't change.
+
+For photo and banner: ask the user to briefly describe them. Even a rough
+description ("formal headshot, smiling" / "default LinkedIn blue banner") is enough
+to score dimension 1.
+
+### Important: Don't Fake Data
+
+If the user cannot or doesn't provide a section (e.g., no recent activity posts),
+note it as "无法评估" in the audit — don't guess or fabricate scores for missing data.
 
 ## The Audit Framework
 
@@ -173,6 +204,12 @@ Present the audit as:
   user is targeting international audiences, recommend an English version.
 - **Multiple target audiences**: If the user wants to appeal to both investors AND
   clients, note which sections serve which audience and flag conflicts.
+- **Login wall (most common case)**: Immediately switch to manual mode after one
+  failed web_fetch. Don't retry. See "How to Get the Profile Content" for the
+  exact copy-paste fields to request.
+- **Partial data**: If the user provides some sections but not others (e.g.,
+  experiences but no activity), audit what you have and mark missing dimensions
+  as "无法评估 — 缺少数据". Don't invent scores.
 
 ## References
 
