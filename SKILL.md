@@ -5,17 +5,13 @@ description: >
   then provide specific, actionable rewrite and strategy recommendations.
   Use when the user wants to audit, optimize, or improve their LinkedIn profile
   for business development, media outreach, fundraising, or investment pitching —
-  or when they mention LinkedIn诊断, LinkedIn audit, LinkedIn优化, LinkedIn profile review,
-  LinkedIn credibility, LinkedIn信任度, 领英诊断, 领英优化, or want to make their
-  LinkedIn look more professional and trustworthy to陌生客户, 媒体编辑, 投资人, or招商对象.
+  or when they mention LinkedIn audit, LinkedIn diagnosis, LinkedIn optimization, LinkedIn profile review, LinkedIn credibility, LinkedIn trust score, or want to make their LinkedIn look more professional and trustworthy to cold prospects, media editors, investors, or business development targets.
 ---
 
 # LinkedIn Credibility Audit
 
 Analyze a LinkedIn profile and deliver a structured credibility diagnosis with specific
-rewrite and strategy recommendations. The audit targets three use cases: business
-development (developing陌生客户), media outreach (建联媒体编辑/记者), and fundraising or
-investment pitching (招商/投资).
+rewrite and strategy recommendations. The audit targets three use cases: business development (cold outreach and prospect conversion), media outreach (connecting with editors and journalists), and fundraising or investment pitching.
 
 ## How to Get the Profile Content
 
@@ -40,12 +36,12 @@ Copy these sections from the profile and I'll audit them:"
 Then ask for exactly these fields:
 
 ```
-1. Headline (名字下面那行小字)
-2. About section (完整复制)
-3. Experience — 最近 2-3 段职位（每段：职位名 + 公司 + 时间 + 描述）
-4. Skills — 前 5 个技能
-5. 最近 3 条动态（如果有发帖）
-6. 头像和 Banner 可以描述一下
+1. Headline (the line directly below your name)
+2. About section (copy in full)
+3. Experience — your 3 most recent positions (for each: title + company + dates + description)
+4. Skills — your top 5
+5. Most recent 3 posts (if you have any)
+6. A brief description of your profile photo and banner
 ```
 
 ### Step 3: Manual Content Audit
@@ -60,7 +56,7 @@ to score dimension 1.
 ### Important: Don't Fake Data
 
 If the user cannot or doesn't provide a section (e.g., no recent activity posts),
-note it as "无法评估" in the audit — don't guess or fabricate scores for missing data.
+note it as "unable to assess" in the audit — don't guess or fabricate scores for missing data.
 
 ## The Audit Framework
 
@@ -209,7 +205,7 @@ Present the audit as:
   exact copy-paste fields to request.
 - **Partial data**: If the user provides some sections but not others (e.g.,
   experiences but no activity), audit what you have and mark missing dimensions
-  as "无法评估 — 缺少数据". Don't invent scores.
+  as "unable to assess — data not provided". Don't invent scores.
 
 ## References
 
